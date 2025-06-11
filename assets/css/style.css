@@ -22,7 +22,9 @@ h3 {
   color: var(--primary-color);
 }
 
-.sub-heading-color {
+/* grid visualisation CSS for testing */
+
+/* .sub-heading-color {
   color: var(--highlight-color);
 }
 
@@ -34,4 +36,4 @@ h3 {
 .col-12 {
     border: 2px solid white;
     background-color: lightgray;
-}
+} */
