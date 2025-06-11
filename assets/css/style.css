@@ -21,7 +21,15 @@ h2,
 h3 {
   font-family: var(--secondary-font);
   color: var(--primary-color);
+}
+
+h1,
+h2 {
   text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 2rem;
 }
 
 .sub-heading-color {
@@ -29,22 +37,34 @@ h3 {
 }
 
 .section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Navbar */
 #navbar {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 #navbar .logo {
-    width: 30px;
+  width: 30px;
 }
 
 /* Header */
 #header .lead {
-    font-family: var(--secondary-font);
+  font-family: var(--secondary-font);
+}
+
+/* Services */
+
+#services .card-footer {
+    font-weight: bold;
+    color: var(--highlight-color);
+    background-color: transparent;
+}
+
+#services .card {
+    margin-bottom: 1.5rem;
 }
 
 /* grid visualisation CSS for testing */
@@ -58,3 +78,37 @@ h3 {
     border: 2px solid white;
     background-color: lightgray;
 } */
+
+/* Media queries */
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px){
+    /* Make all service cards same height for consistency */
+    #services .card-body{
+        min-height: 191px;
+    }
+}
+
+/* Large devices (small laptops, 992px and up) */
+@media screen and (min-width: 992px){
+    /* Make all service cards same height for consistency */
+    #services .card-body{
+        min-height: auto;
+    }
+}
+
+/* xl Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px){
+    /* Make all service cards same height for consistency */
+    #services .card-body{
+        min-height: 220px;
+    }
+}
+
+/* xxl Large devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px){
+    /* Make all service cards same height for consistency */
+    #services .card-body{
+        min-height: 195px;
+    }
+}
