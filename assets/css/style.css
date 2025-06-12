@@ -102,6 +102,17 @@ h2 {
     border: none;
 }
 
+/* Events section */
+
+#events .card {
+    margin: auto;
+    background-color: var(--highlight-color);
+    color: white;
+    border-radius: 0;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
 /* Footer / contact */
 
 #contact {
