@@ -40,7 +40,7 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#services">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#events">Events</a>
@@ -326,6 +326,27 @@
         crossorigin="anonymous"></script>
     <!-- link to font awesome JS file -->
     <script src="https://kit.fontawesome.com/fa41a0a3f2.js" crossorigin="anonymous"></script>
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+        document
+            .querySelectorAll(".navbar-collapse .nav-link")
+            .forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    let section = document.querySelector(e.target.getAttribute("href"));
+                    if (section) {
+                        e.preventDefault(); // Prevent default anchor click behavior
+                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                        window.scroll({
+                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                            behavior: "smooth",
+                        });
+                        document
+                            .querySelector(".navbar-collapse")
+                            .classList.remove("show"); // Collapse navbar
+                    }
+                });
+            });
+    </script>
 </body>
 
 </html>
