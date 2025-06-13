@@ -113,6 +113,12 @@ h2 {
     font-weight: bold;
 }
 
+/* Reservation section */
+
+#reservation .custom-button-outline {
+    float: right;
+}
+
 /* Footer / contact */
 
 #contact {
